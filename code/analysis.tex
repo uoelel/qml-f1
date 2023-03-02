@@ -12,8 +12,7 @@
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-       %%% MODIFIED: unicode-math conflics with expex; mathspects conflicts with glossaries/leipzig
-  \usepackage{fontspec} % \usepackage{unicode-math}
+  \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
   \setmainfont[]{DejaVu Sans}
@@ -35,14 +34,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={SQMB - Summative Assessment 1},
-  pdfauthor={YOUR EXAM NUMBER},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -55,13 +46,13 @@
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
 \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
 \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
 \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
 \newcommand{\BuiltInTok}[1]{#1}
 \newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
@@ -69,7 +60,7 @@
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
 \newcommand{\ExtensionTok}[1]{#1}
 \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\ImportTok}[1]{#1}
 \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
@@ -78,7 +69,7 @@
 \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
 \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
@@ -114,10 +105,18 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={SQMB - Summative Assessment 1},
+  pdfauthor={YOUR EXAM NUMBER},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
 \title{SQMB - Summative Assessment 1}
 \author{YOUR EXAM NUMBER}
-\date{2023-02-22}
+\date{2023-03-02}
 
 \begin{document}
 \maketitle
@@ -127,16 +126,25 @@
 
 \textbf{PLEASE READ CAREFULLY}
 
-\textbf{DUE THURSDAY 8 DECEMBER AT NOON}
+\textbf{DUE THURSDAY, 30 MARCH 2023 AT NOON}
 
-Remember to include your \textbf{exam number as the author} in the
-document preamble above.
+You must include your \textbf{exam number as the author} in the document
+preamble above.
 
-Please, \textbf{use a sans-serif font}. I recommend the DejaVu Sans
-font. You can download the DejaVu fonts here:
+You'll notice that line 10 of the preamble says
+\texttt{mainfont:\ DejaVu\ Sans}. We would appreciate it if you'd use
+this font (or if not, at least some other sans-serif font). \textbf{Try
+to knit this .Rmd file immediately to see if you have this font
+installed.} - If you get an error message saying the font could not be
+found, you can download it here:
 \url{http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.zip}.
+- Then, install it appropriately for your operating system. - Here's a
+guide for Windows:
+\url{https://www.digitaltrends.com/computing/how-to-install-fonts-in-windows-10/}.
+- Here's a guide for Mac:
+\url{https://support.apple.com/en-gb/HT201749}.
 
-\textbf{Complete each exercise} by completing tasks, answering questions
+\textbf{Do each exercise} by completing tasks, answering questions
 and/or providing code if required.
 
 \textbf{When you are ready to submit}:
@@ -155,8 +163,8 @@ and/or providing code if required.
 \hypertarget{exercises}{%
 \section{Exercises}\label{exercises}}
 
-\hypertarget{excercise-1}{%
-\subsection{Excercise 1}\label{excercise-1}}
+\hypertarget{exercise-1}{%
+\subsection{Exercise 1}\label{exercise-1}}
 
 \begin{itemize}
 \tightlist
@@ -300,12 +308,10 @@ faceting by priming setting.
 \end{itemize}
 
 \begin{longtable}[]{@{}lll@{}}
-\toprule\noalign{}
+\toprule()
 & Variable & Probability distribution \\
-\midrule\noalign{}
+\midrule()
 \endhead
-\bottomrule\noalign{}
-\endlastfoot
 1 & Vowel duration (ms) & \\
 2 & Formant values (hz) & \\
 3 & Accuracy (binary) & \\
@@ -316,6 +322,7 @@ faceting by priming setting.
 8 & Counts of infant gestures & \\
 9 & Logged reaction times & \\
 10 & Ratio of 1st vs non-1st pronouns & \\
+\bottomrule()
 \end{longtable}
 
 \hypertarget{exercise-5}{%
@@ -337,15 +344,14 @@ faceting by priming setting.
 \end{itemize}
 
 \begin{longtable}[]{@{}llll@{}}
-\toprule\noalign{}
+\toprule()
 & Bangladeshi & Mandarin & English \\
-\midrule\noalign{}
+\midrule()
 \endhead
-\bottomrule\noalign{}
-\endlastfoot
 Bangladeshi & 1 & 0 & 0 \\
 Mandarin & 0 & 2 & 0 \\
 English & 0 & 0 & 3 \\
+\bottomrule()
 \end{longtable}
 
 \hypertarget{exercise-6}{%
@@ -502,12 +508,10 @@ model specification and results of your linear model.
 \textbf{TRUE or FALSE}
 
 \begin{longtable}[]{@{}lll@{}}
-\toprule\noalign{}
+\toprule()
 & True & False \\
-\midrule\noalign{}
+\midrule()
 \endhead
-\bottomrule\noalign{}
-\endlastfoot
 1 & & \\
 2 & & \\
 3 & & \\
@@ -523,6 +527,7 @@ model specification and results of your linear model.
 13 & & \\
 14 & & \\
 15 & & \\
+\bottomrule()
 \end{longtable}
 
 \hypertarget{exercise-9}{%

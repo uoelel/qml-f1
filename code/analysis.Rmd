@@ -21,13 +21,19 @@ library(tidyverse)
 
 **PLEASE READ CAREFULLY**
 
-**DUE THURSDAY 8 DECEMBER AT NOON**
+**DUE THURSDAY, 30 MARCH 2023 AT NOON**
 
-Remember to include your **exam number as the author** in the document preamble above.
+You must include your **exam number as the author** in the document preamble above. 
 
-Please, **use a sans-serif font**. I recommend the DejaVu Sans font. You can download the DejaVu fonts here: <http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.zip>.
+You'll notice that line 10 of the preamble says `mainfont: DejaVu Sans`.
+We would appreciate it if you'd use this font (or if not, at least some other sans-serif font).
+**Try to knit this .Rmd file immediately to see if you have this font installed.**
+  - If you get an error message saying the font could not be found, you can download it here: <http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.zip>.
+  - Then, install it appropriately for your operating system.
+    - Here's a guide for Windows: <https://www.digitaltrends.com/computing/how-to-install-fonts-in-windows-10/>.
+    - Here's a guide for Mac: <https://support.apple.com/en-gb/HT201749>.
 
-**Complete each exercise** by completing tasks, answering questions and/or providing code if required.
+**Do each exercise** by completing tasks, answering questions and/or providing code if required.
 
 **When you are ready to submit**:
 
@@ -37,7 +43,7 @@ Please, **use a sans-serif font**. I recommend the DejaVu Sans font. You can dow
 
 # Exercises
 
-## Excercise 1
+## Exercise 1
 
 - You are given three data files and you have to create one plot for each.
 - Each data file requires you to read in the file, filter/transform the data and create a plot that shows a particular aspect of the data.
@@ -251,4 +257,4 @@ Report the model specification and results of your linear model.
 
 ## Exercise 9
 
-- Explain why it is important to include interactions between predictors when including multiple predictors in a model.
+- Explain when it is important to include interactions between predictors when including multiple predictors in a model.
