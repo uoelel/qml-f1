@@ -116,7 +116,7 @@
 
 \title{SQMB - Summative Assessment 1}
 \author{YOUR EXAM NUMBER}
-\date{2023-03-02}
+\date{2023-03-03}
 
 \begin{document}
 \maketitle
@@ -158,8 +158,8 @@ this font installed.}
 \end{itemize}
 
 \textbf{Do each exercise} by completing tasks, answering questions
-and/or providing code if required. Please keep your written answers as
-concise as possible.
+and/or providing code if required. Please \textbf{keep your written
+answers as concise as possible.}
 
 Feel free to \textbf{add as many code chunks as you want} throughout.
 
@@ -175,6 +175,8 @@ Feel free to \textbf{add as many code chunks as you want} throughout.
 \item
   \textbf{Upload} the PDF file to Learn.
 \end{enumerate}
+
+\newpage
 
 \hypertarget{exercises}{%
 \section{Exercises}\label{exercises}}
@@ -193,8 +195,8 @@ plot you make.
 \subsubsection{Exercise 1.1}\label{exercise-1.1}}
 
 Based on \texttt{data\_e1\_1.csv}: Plot centered speech rate against f0
-midpoint, distinguishing somehow between conditions, faceting by vowel.
-Describe what you see.
+midpoint, colouring by condition and faceting by vowel. Describe what
+you see.
 
 \hypertarget{exercise-1.2}{%
 \subsubsection{Exercise 1.2}\label{exercise-1.2}}
@@ -209,16 +211,18 @@ Based on \texttt{data\_e1\_3.csv}: Plot the proportion of correct
 responses for each trial in the easy and difficult conditions, faceting
 by priming setting. Describe what you see.
 
-\hypertarget{exercise-2-correcting-plots}{%
-\subsection{Exercise 2: Correcting
-plots}\label{exercise-2-correcting-plots}}
+\newpage
+
+\hypertarget{exercise-2-critiquing-and-correcting-plots}{%
+\subsection{Exercise 2: Critiquing and correcting
+plots}\label{exercise-2-critiquing-and-correcting-plots}}
 
 The following two plots are not appropriate for the type of data they
 show. Briefly describe what is wrong with each plot, try to figure out
 what the plots might be aiming to visualise, and write your own code to
-create a more appropriate plot for the exact same data. If you're unsure
-about the kind of data you're dealing with, having a look at the data
-frame might help.
+create a more appropriate plot for the exact same data. (If you're
+unsure about the kind of data you're dealing with, having a look at the
+data frame might help.)
 
 \hypertarget{exercise-2.1}{%
 \subsubsection{Exercise 2.1}\label{exercise-2.1}}
@@ -279,29 +283,33 @@ frame might help.
 
 \includegraphics{analysis_files/figure-latex/e2-2-1.pdf}
 
+\newpage
+
 \hypertarget{exercise-3-choosing-appropriate-summary-measures}{%
 \subsection{Exercise 3: Choosing appropriate summary
 measures}\label{exercise-3-choosing-appropriate-summary-measures}}
 
 Read in \texttt{data\_e3.csv} and obtain summary measures (central
-tendency: mean, median, or mode; and dispersion: standard deviation or
+tendency: mean, median, or mode; dispersion: standard deviation or
 range) for each variable in the data. Make sure to pick the correct
 measure(s) for the respective variable type.
 
 Then, for each variable, briefly state the type of variable, the chosen
 measure(s), and report the value of the measure(s).
 
+\newpage
+
 \hypertarget{exercise-4-identifying-probability-distributions}{%
 \subsection{Exercise 4: Identifying probability
 distributions}\label{exercise-4-identifying-probability-distributions}}
 
-For each of the variables in the table, specify in the ``Probability
+For each variable in the table below, specify in the ``Probability
 distribution'' column whether it's (in principle) distributed according
-to a Gaussian, log-normal, or Bernoulli distribution, or according to
-some different one (put ``other'' in this case).
+to a Gaussian, a log-normal, or a Bernoulli distribution, or according
+to some different one (put ``other'' in this case).
 
-If you have doubts about any of the variables, write about it briefly
-below the table.
+If you have doubts about any of the variables, you can write about it
+briefly below the table.
 
 \begin{longtable}[]{@{}lll@{}}
 \toprule()
@@ -311,13 +319,17 @@ below the table.
 1 & Vowel duration (ms) & \\
 2 & Formant values (hz) & \\
 3 & Accuracy (binary) & \\
-4 & Readability (0--100) & \\
+4 & Readability (0-100) & \\
 5 & Reaction times (ms) & \\
-6 & Scots vs English & \\
-7 & Logged reaction times & \\
-8 & Ratio of 1st vs non-1st pronouns & \\
+6 & Number of relative clauses & \\
+7 & Scots vs English & \\
+8 & Counts of infant gestures & \\
+9 & Logged reaction times & \\
+10 & Ratio of 1st vs non-1st pronouns & \\
 \bottomrule()
 \end{longtable}
+
+\newpage
 
 \hypertarget{exercise-5-contrast-coding}{%
 \subsection{Exercise 5: Contrast
@@ -342,6 +354,8 @@ levels according to R's default alphabetical order. Briefly explain what
 is wrong with this table, and create a new table with the correct coding
 scheme (you can use \url{https://tablesgenerator.com/markdown_tables\#}
 to format the table in markdown).
+
+\newpage
 
 \hypertarget{exercise-6-running-a-bayesian-linear-model}{%
 \subsection{Exercise 6: Running a Bayesian linear
@@ -376,8 +390,7 @@ Read the \texttt{data\_e7.csv} file. It contains the following columns:
   \texttt{RT}: reaction time in ms.
 \end{itemize}
 
-Make sure to change columns to factors if needed and to specify the
-order of levels.
+As needed, change columns to factors and specify the order of levels.
 
 Run a linear model that helps you answer the following questions:
 
@@ -386,18 +399,25 @@ Run a linear model that helps you answer the following questions:
 \tightlist
 \item
   Do \texttt{baba} words elicit more \texttt{big} responses than
-  \texttt{kiki} words?
+  \texttt{kiki} words do?
 \item
   Is the effect of \texttt{baba} words on response greater with shorter
   reaction times?
 \end{enumerate}
 
-In code \emph{and} in a brief written description, report the model
-specification and the results. Also include a plot of the model results.
+(Optional: If it helps, you can try creating plots or summary data
+frames that show how the data is distributed across these variables.
+This could offer a sense check for whether your model is producing
+plausible output.)
 
-\hypertarget{exercise-7-correcting-a-linear-model}{%
-\subsection{Exercise 7: Correcting a linear
-model}\label{exercise-7-correcting-a-linear-model}}
+In code \emph{and} in a brief written description, report the model
+specification and the results. Also visualise the model's estimates.
+
+\newpage
+
+\hypertarget{exercise-7-critiquing-and-correcting-a-linear-model}{%
+\subsection{Exercise 7: Critiquing and correcting a linear
+model}\label{exercise-7-critiquing-and-correcting-a-linear-model}}
 
 Imagine you are asked to review a paper. Below you can find the
 description of a mock study, including the details of the linear model
@@ -440,17 +460,14 @@ study based on the provided data (\texttt{data\_e8.csv}). Report the
 model specification and the results of your linear model with respect to
 the hypotheses.
 
+\newpage
+
 \hypertarget{exercise-8-true-or-false}{%
 \subsection{Exercise 8: True or false}\label{exercise-8-true-or-false}}
 
-\begin{itemize}
-\tightlist
-\item
-  Read the statements below.
-\item
-  For each, indicate whether the statement is true or false by adding an
-  ``x'' in the relevant column of the table below.
-\end{itemize}
+Read the statements below. For each, indicate whether the statement is
+true or false by adding an ``x'' in the relevant column of the table
+below.
 
 \textbf{Statements}
 
@@ -513,9 +530,11 @@ the hypotheses.
 \bottomrule()
 \end{longtable}
 
-\hypertarget{exercise-9-thinking-about-interactions}{%
-\subsection{Exercise 9: Thinking about
-interactions}\label{exercise-9-thinking-about-interactions}}
+\newpage
+
+\hypertarget{exercise-9-using-interactions}{%
+\subsection{Exercise 9: Using
+interactions}\label{exercise-9-using-interactions}}
 
 Explain when it is important to include interactions between predictors
 in your model.
