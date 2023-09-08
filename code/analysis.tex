@@ -12,7 +12,8 @@
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+       %%% MODIFIED: unicode-math conflics with expex; mathspects conflicts with glossaries/leipzig
+  \usepackage{fontspec} % \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
   \setmainfont[]{DejaVu Sans}
@@ -34,6 +35,14 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={QML - Formative Assessment 1},
+  pdfauthor={YOUR EXAM NUMBER},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -46,13 +55,13 @@
 \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
 \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
 \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
 \newcommand{\BuiltInTok}[1]{#1}
 \newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
 \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
 \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
@@ -60,7 +69,7 @@
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
 \newcommand{\ExtensionTok}[1]{#1}
 \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
 \newcommand{\ImportTok}[1]{#1}
 \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
@@ -69,7 +78,7 @@
 \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
 \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
 \newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
 \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
@@ -105,36 +114,27 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={SQMB - Summative Assessment 1},
-  pdfauthor={YOUR EXAM NUMBER},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
 
-\title{SQMB - Summative Assessment 1}
+\title{QML - Formative Assessment 1}
 \author{YOUR EXAM NUMBER}
-\date{2023-03-03}
+\date{2023-09-08}
 
 \begin{document}
 \maketitle
 
-\hypertarget{instructions}{%
-\section{Instructions}\label{instructions}}
+\section{Instructions}\label{instructions}
 
 \textbf{PLEASE READ CAREFULLY}
 
-\textbf{DUE THURSDAY, 30 MARCH 2023 AT NOON}
+\textbf{DUE Week 5 - Thu 19 October at noon}
 
 You must include your \textbf{exam number as the author} in the document
 preamble above.
 
 You'll notice that line 10 of the preamble says
 \texttt{mainfont:\ DejaVu\ Sans}. We would appreciate it if you'd use
-this font (or at least some other sans-serif font). \textbf{Try to knit
-this Rmd file immediately, before making any changes, to see if you have
+this font (or at least some other sans-serif font). \textbf{Try to
+render this Rmd file now, before making any changes, to see if you have
 this font installed.}
 
 \begin{itemize}
@@ -178,12 +178,9 @@ Feel free to \textbf{add as many code chunks as you want} throughout.
 
 \newpage
 
-\hypertarget{exercises}{%
-\section{Exercises}\label{exercises}}
+\section{Exercises}\label{exercises}
 
-\hypertarget{exercise-1-creating-plots}{%
-\subsection{Exercise 1: Creating
-plots}\label{exercise-1-creating-plots}}
+\subsection{Exercise 1: Creating plots}\label{exercise-1-creating-plots}
 
 The next three exercises below require you to read in a particular file,
 filter/transform the data as needed, and create one or more plots that
@@ -191,21 +188,18 @@ appropriately illustrate the described aspects of the data. Please also
 include a concise written description of the patterns you notice in each
 plot you make.
 
-\hypertarget{exercise-1.1}{%
-\subsubsection{Exercise 1.1}\label{exercise-1.1}}
+\subsubsection{Exercise 1.1}\label{exercise-1.1}
 
-Based on \texttt{data\_e1\_1.csv}: Plot centered speech rate against f0
-midpoint, colouring by condition and faceting by vowel. Describe what
-you see.
+Based on \texttt{data\_e1\_1.csv}: Plot speech rate against midpoint f0,
+colouring by condition and faceting by vowel. Describe what you see.
 
-\hypertarget{exercise-1.2}{%
-\subsubsection{Exercise 1.2}\label{exercise-1.2}}
+\subsubsection{Exercise 1.2}\label{exercise-1.2}
 
-Based on \texttt{data\_e1\_2.csv}: Plot logged reaction times by
-language, by environment, and by age. Describe what you see.
+Based on \texttt{data\_e1\_2.csv}: Create a single plot with logged
+reaction times by language, by environment, and by age (use any means).
+Describe what you see.
 
-\hypertarget{exercise-1.3}{%
-\subsubsection{Exercise 1.3}\label{exercise-1.3}}
+\subsubsection{Exercise 1.3}\label{exercise-1.3}
 
 Based on \texttt{data\_e1\_3.csv}: Plot the proportion of correct
 responses for each trial in the easy and difficult conditions, faceting
@@ -213,9 +207,8 @@ by priming setting. Describe what you see.
 
 \newpage
 
-\hypertarget{exercise-2-critiquing-and-correcting-plots}{%
 \subsection{Exercise 2: Critiquing and correcting
-plots}\label{exercise-2-critiquing-and-correcting-plots}}
+plots}\label{exercise-2-critiquing-and-correcting-plots}
 
 The following two plots are not appropriate for the type of data they
 show. Briefly describe what is wrong with each plot, try to figure out
@@ -224,8 +217,7 @@ create a more appropriate plot for the exact same data. (If you're
 unsure about the kind of data you're dealing with, having a look at the
 data frame might help.)
 
-\hypertarget{exercise-2.1}{%
-\subsubsection{Exercise 2.1}\label{exercise-2.1}}
+\subsubsection{Exercise 2.1}\label{exercise-2.1}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -253,8 +245,7 @@ data frame might help.)
 
 \includegraphics{analysis_files/figure-latex/e2-1-1.pdf}
 
-\hypertarget{exercise-2.2}{%
-\subsubsection{Exercise 2.2}\label{exercise-2.2}}
+\subsubsection{Exercise 2.2}\label{exercise-2.2}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -285,9 +276,8 @@ data frame might help.)
 
 \newpage
 
-\hypertarget{exercise-3-choosing-appropriate-summary-measures}{%
 \subsection{Exercise 3: Choosing appropriate summary
-measures}\label{exercise-3-choosing-appropriate-summary-measures}}
+measures}\label{exercise-3-choosing-appropriate-summary-measures}
 
 Read in \texttt{data\_e3.csv} and obtain summary measures (central
 tendency: mean, median, or mode; dispersion: standard deviation or
@@ -299,9 +289,8 @@ measure(s), and report the value of the measure(s).
 
 \newpage
 
-\hypertarget{exercise-4-identifying-probability-distributions}{%
 \subsection{Exercise 4: Identifying probability
-distributions}\label{exercise-4-identifying-probability-distributions}}
+distributions}\label{exercise-4-identifying-probability-distributions}
 
 For each variable in the table below, specify in the ``Probability
 distribution'' column whether it's (in principle) distributed according
@@ -312,10 +301,12 @@ If you have doubts about any of the variables, you can write about it
 briefly below the table.
 
 \begin{longtable}[]{@{}lll@{}}
-\toprule()
+\toprule\noalign{}
 & Variable & Probability distribution \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 1 & Vowel duration (ms) & \\
 2 & Formant values (hz) & \\
 3 & Accuracy (binary) & \\
@@ -326,217 +317,11 @@ briefly below the table.
 8 & Counts of infant gestures & \\
 9 & Logged reaction times & \\
 10 & Ratio of 1st vs non-1st pronouns & \\
-\bottomrule()
 \end{longtable}
 
 \newpage
 
-\hypertarget{exercise-5-contrast-coding}{%
-\subsection{Exercise 5: Contrast
-coding}\label{exercise-5-contrast-coding}}
-
-Look at the following table that represents the coding of a categorical
-predictor \texttt{background}.
-
-\begin{longtable}[]{@{}llll@{}}
-\toprule()
-& Bangladeshi & Mandarin & English \\
-\midrule()
-\endhead
-Bangladeshi & 1 & 0 & 0 \\
-Mandarin & 0 & 2 & 0 \\
-English & 0 & 0 & 3 \\
-\bottomrule()
-\end{longtable}
-
-Assume that the intention was to use treatment coding, and to order the
-levels according to R's default alphabetical order. Briefly explain what
-is wrong with this table, and create a new table with the correct coding
-scheme (you can use \url{https://tablesgenerator.com/markdown_tables\#}
-to format the table in markdown).
-
-\newpage
-
-\hypertarget{exercise-6-running-a-bayesian-linear-model}{%
-\subsection{Exercise 6: Running a Bayesian linear
-model}\label{exercise-6-running-a-bayesian-linear-model}}
-
-Imagine you've just run the following study:
-
-\begin{quote}
-Participants are asked to listen to nonce words and choose whether they
-think the word refers to a small object or a big object. Half of the
-words are of the \texttt{kiki} type (back consonants and high front
-vowels), while half are of the \texttt{baba} type (front consonant and
-low vowels). The expectation is that \texttt{kiki} words should elicit
-more \texttt{small} responses and \texttt{baba} words more \texttt{big}
-responses. The data also contains reaction time, and the expectation
-there is that shorter reaction times would correlate with a greater
-effect of hearing a \texttt{kiki} word vs a \texttt{baba} word.
-\end{quote}
-
-Read the \texttt{data\_e7.csv} file. It contains the following columns:
-
-\begin{itemize}
-\tightlist
-\item
-  \texttt{subject}: the subject's ID.
-\item
-  \texttt{response}: whether the subject has chosen \texttt{small} or
-  \texttt{big}.
-\item
-  \texttt{condition}: \texttt{kiki} vs \texttt{baba} word.
-\item
-  \texttt{RT}: reaction time in ms.
-\end{itemize}
-
-As needed, change columns to factors and specify the order of levels.
-
-Run a linear model that helps you answer the following questions:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Do \texttt{baba} words elicit more \texttt{big} responses than
-  \texttt{kiki} words do?
-\item
-  Is the effect of \texttt{baba} words on response greater with shorter
-  reaction times?
-\end{enumerate}
-
-(Optional: If it helps, you can try creating plots or summary data
-frames that show how the data is distributed across these variables.
-This could offer a sense check for whether your model is producing
-plausible output.)
-
-In code \emph{and} in a brief written description, report the model
-specification and the results. Also visualise the model's estimates.
-
-\newpage
-
-\hypertarget{exercise-7-critiquing-and-correcting-a-linear-model}{%
-\subsection{Exercise 7: Critiquing and correcting a linear
-model}\label{exercise-7-critiquing-and-correcting-a-linear-model}}
-
-Imagine you are asked to review a paper. Below you can find the
-description of a mock study, including the details of the linear model
-the researchers have run. The results are not included.
-
-\begin{quote}
-We recorded 50 subjects while they read 100 sentences on a screen. For
-each subject, half of the sentences were presented together with
-pictures of natural landscapes. The other half was presented together
-with pictures of urban landscapes. Background sounds were delivered via
-headphones to the subject in each trial of the natural and urban setting
-condition. For each setting (natural vs urban), half of the trials had
-natural sounds (birds, waterfalls, wind, waves, thunders) and half had
-urban sounds (traffic noise, sirens, people walking).
-\end{quote}
-
-\begin{quote}
-For each trial we measured speech rate as number of syllables per second
-(syl/s). The hypothesis is that speech rate will be faster in the urban
-setting trials relative to the natural setting trials. Moreover, the
-effect of background noise (natural vs urban sounds) will decrease
-speech rate in the natural setting but not in the urban setting. In
-other words, we expect the visual setting (natural vs urban) to prime
-speakers to slow down their speech rate, but we expect the auditory
-setting (natural vs urban) to make a difference only in the visual
-natural setting.
-\end{quote}
-
-\begin{quote}
-To assess these expectations, we ran a linear model using a Gaussian
-distribution with visual setting (natural vs urban) as the outcome
-variable. We included the following predictors: speech rate (centered)
-and auditory setting (natural vs urban). In R syntax:
-\texttt{brm(visual\ \textasciitilde{}\ speech\_rate\_c\ +\ auditory)}.
-\end{quote}
-
-Now, critique the analysis (i.e., explain what is wrong with it) and run
-a more appropriate linear model to assess the research hypotheses of the
-study based on the provided data (\texttt{data\_e8.csv}). Report the
-model specification and the results of your linear model with respect to
-the hypotheses.
-
-\newpage
-
-\hypertarget{exercise-8-true-or-false}{%
-\subsection{Exercise 8: True or false}\label{exercise-8-true-or-false}}
-
-Read the statements below. For each, indicate whether the statement is
-true or false by adding an ``x'' in the relevant column of the table
-below.
-
-\textbf{Statements}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Frequentist CIs and Bayesian CrIs have the same interpretation.
-\item
-  The types of predictor variables in a linear model decide which
-  distribution family to use in the model.
-\item
-  Strip charts are among the plots that can be used to visualise the
-  individual observations of a continuous variable.
-\item
-  All population-level effects returned by a model summary are
-  conditional posterior probabilities.
-\item
-  95\% CrIs are more informative than 60\% CrIs.
-\item
-  Quantitative methods are objective way to work with data.
-\item
-  The most appropriate distribution family for a binary variable is the
-  Bernoulli family.
-\item
-  About 68\% of the data in a Gaussian distribution is contained within
-  the range marked by ``mean -- 1 SD'' and ``mean + 1 SD''.
-\item
-  \texttt{plogis(0.3\ +\ 0.2)} is equivalent to
-  \texttt{plogis(0.3)\ +\ plogis(0.2)}.
-\item
-  The goal of statistics is to definitively accept or reject hypotheses.
-\item
-  When creating a density plot, the \emph{y}-axis can be interpreted as
-  the absolute probability of obtaining a specific value.
-\item
-  The number of parameters to estimate in a Bayesian model is equivalent
-  to the number of predictors in the model.
-\end{enumerate}
-
-\textbf{TRUE or FALSE}
-
-\begin{longtable}[]{@{}lll@{}}
-\toprule()
-& True & False \\
-\midrule()
-\endhead
-1 & & \\
-2 & & \\
-3 & & \\
-4 & & \\
-5 & & \\
-6 & & \\
-7 & & \\
-8 & & \\
-9 & & \\
-10 & & \\
-11 & & \\
-12 & & \\
-\bottomrule()
-\end{longtable}
-
-\newpage
-
-\hypertarget{exercise-9-using-interactions}{%
-\subsection{Exercise 9: Using
-interactions}\label{exercise-9-using-interactions}}
-
-Explain when it is important to include interactions between predictors
-in your model.
+\subsection{Exercise 5: Running a Bayesian linear
+model}\label{exercise-5-running-a-bayesian-linear-model}
 
 \end{document}
