@@ -124,10 +124,13 @@ data_e2_2 %>%
 
 ## Exercise 3: Choosing appropriate summary measures
 
-Read in `data_e3.csv` and obtain summary measures (central tendency: mean, median, or mode; dispersion: standard deviation or range) for each variable in the data.
-Make sure to pick the correct measure(s) for the respective variable type.
 
-Then, for each variable, briefly state the type of variable, the chosen measure(s), and report the value of the measure(s).
+- Read in `data_e3.csv`
+- Obtain summary measures (central tendency: mean, median, or mode; dispersion: standard deviation or range):
+  - For each variable on their own.
+  - For each variable in each group/accuracy combination.
+- Make sure to pick the correct measure(s) for the respective variable type.
+- Report all the measures in writing as you would in a paper.
 
 ```{r}
 
