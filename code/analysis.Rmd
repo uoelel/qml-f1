@@ -141,7 +141,11 @@ data_e2_2 %>%
 
 ## Exercise 4: Identifying probability distributions
 
+**This is a challenge exercise!** So far we have only looked at Gaussian distributions, but if you feel like you can learn about the log-normal and Bernoulli distributions and try to complete the exercise. The first summative assessment will have an exercise like this one (but we will have seen all the relevant probabilities by then).
+
 For each variable in the table below, specify in the "Probability distribution" column whether it's (in principle) distributed according to a Gaussian, a log-normal, or a Bernoulli distribution, or according to some different one (put "other" in this case).
+
+Alternatively, just try to identify variables that could be Gaussian and use "other" for the rest.
 
 If you have doubts about any of the variables, you can write about it briefly below the table.
 
@@ -162,6 +166,8 @@ If you have doubts about any of the variables, you can write about it briefly be
 \newpage
 
 ## Exercise 5: Running a Bayesian linear model
+
+**WARNING**: This exercise asks you to model data from the Harry Potter saga. We in no way support the transgender-phobic views of the saga's author (for background, check this: <https://www.vox.com/culture/22254435/harry-potter-tv-series-hbo-jk-rowling-transphobic>).
 
 The file `data_e5.csv` contains a list of words from each book of the Harry Potter saga with their sentiment score (from -5 to +5, from most negative to most positive).
 
