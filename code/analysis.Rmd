@@ -177,6 +177,8 @@ Then fit a model with `brm()` with `value` as the outcome variable and answer th
 
 Feel free to also create plots to explore the data (in its entirety and/or just for Book 7).
 
+**NOTE**: Warning messages from the MCMC sampling might arise, do not worry about these for the time being. They are in most cases innocuous.
+
 ```{r}
 
 ```
