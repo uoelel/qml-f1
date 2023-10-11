@@ -167,9 +167,32 @@ If you have doubts about any of the variables, you can write about it briefly be
 
 ## Exercise 5: Running a Bayesian linear model
 
+Please, choose either 5a or 5b (but you are free to do both if you wish!).
+
+### Exercise 5a
+
+The file `data_e5a.csv` contains a list of words from eight songs by Nina Simone their sentiment score (from -5 to +5, from most negative to most positive).
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Nina_Simone), "Nina Simone was an American singer, songwriter, pianist, composer, arranger and civil rights activist. Her music spanned styles including classical, folk, gospel, blues, jazz, R&B, and pop."
+
+Read in the data, then fit a model with `brm()` with `value` as the outcome variable and answer this question: *What is the average sentiment in Nina Simone's songs? Positive, negative or neutral?*
+
+Is the data in a good shape to answer that question or do you think further processing like filtering might be needed?
+
+Feel free to also create plots to explore the data.
+
+**NOTE**: Warning messages from the MCMC sampling might arise, do not worry about these for the time being. They are in most cases innocuous.
+
+```{r}
+
+```
+
+
+### Exercise 5b
+
 **WARNING**: This exercise asks you to model data from the Harry Potter saga. We in no way support the transgender-phobic views of the saga's author (for background, check this: <https://www.vox.com/culture/22254435/harry-potter-tv-series-hbo-jk-rowling-transphobic>).
 
-The file `data_e5.csv` contains a list of words from each book of the Harry Potter saga with their sentiment score (from -5 to +5, from most negative to most positive).
+The file `data_e5b.csv` contains a list of words from each book of the Harry Potter saga with their sentiment score (from -5 to +5, from most negative to most positive).
 
 Read in the data and then create a new tibble containing only the words from Book 7.
 

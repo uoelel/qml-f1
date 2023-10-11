@@ -117,7 +117,7 @@
 
 \title{QML - Formative Assessment 1}
 \author{YOUR EXAM NUMBER}
-\date{2023-10-10}
+\date{2023-10-11}
 
 \begin{document}
 \maketitle
@@ -347,12 +347,42 @@ briefly below the table.
 \subsection{Exercise 5: Running a Bayesian linear
 model}\label{exercise-5-running-a-bayesian-linear-model}
 
+Please, choose either 5a or 5b (but you are free to do both if you
+wish!).
+
+\subsubsection{Exercise 5a}\label{exercise-5a}
+
+The file \texttt{data\_e5a.csv} contains a list of words from eight
+songs by Nina Simone their sentiment score (from -5 to +5, from most
+negative to most positive).
+
+From \href{https://en.wikipedia.org/wiki/Nina_Simone}{Wikipedia}, ``Nina
+Simone was an American singer, songwriter, pianist, composer, arranger
+and civil rights activist. Her music spanned styles including classical,
+folk, gospel, blues, jazz, R\&B, and pop.''
+
+Read in the data, then fit a model with \texttt{brm()} with
+\texttt{value} as the outcome variable and answer this question:
+\emph{What is the average sentiment in Nina Simone's songs? Positive,
+negative or neutral?}
+
+Is the data in a good shape to answer that question or do you think
+further processing like filtering might be needed?
+
+Feel free to also create plots to explore the data.
+
+\textbf{NOTE}: Warning messages from the MCMC sampling might arise, do
+not worry about these for the time being. They are in most cases
+innocuous.
+
+\subsubsection{Exercise 5b}\label{exercise-5b}
+
 \textbf{WARNING}: This exercise asks you to model data from the Harry
 Potter saga. We in no way support the transgender-phobic views of the
 saga's author (for background, check this:
 \url{https://www.vox.com/culture/22254435/harry-potter-tv-series-hbo-jk-rowling-transphobic}).
 
-The file \texttt{data\_e5.csv} contains a list of words from each book
+The file \texttt{data\_e5b.csv} contains a list of words from each book
 of the Harry Potter saga with their sentiment score (from -5 to +5, from
 most negative to most positive).
 
